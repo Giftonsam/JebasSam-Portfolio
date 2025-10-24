@@ -1,0 +1,536 @@
+/* ===== ABOUT SECTION ===== */
+.about {
+    padding: 6rem 0;
+    position: relative;
+}
+
+.about::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+        radial-gradient(circle at 30% 20%, rgba(0, 212, 255, 0.03) 0%, transparent 50%),
+        radial-gradient(circle at 70% 80%, rgba(0, 153, 204, 0.03) 0%, transparent 50%);
+    z-index: -1;
+}
+
+.about .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* ===== ABOUT HEADER ===== */
+.about-header {
+    text-align: center;
+    margin-bottom: 4rem;
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.about h2 {
+    font-size: clamp(2.5rem, 4vw, 3.5rem);
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    position: relative;
+    display: inline-block;
+}
+
+.about h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: var(--accent-gradient);
+    border-radius: 2px;
+}
+
+.about-intro {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-intro strong {
+    color: var(--accent-primary);
+    font-weight: 700;
+}
+
+/* ===== ABOUT GRID ===== */
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0 4rem;
+}
+
+/* ===== ABOUT CARDS ===== */
+.about-card {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    text-align: center;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.about-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--accent-gradient);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: var(--transition);
+}
+
+.about-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--accent-primary);
+}
+
+.about-card:hover::before {
+    transform: scaleX(1);
+}
+
+.about-card h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.about-card h3::before {
+    font-size: 1.5rem;
+}
+
+.about-card:nth-child(1) h3::before {
+    content: '📍';
+}
+
+.about-card:nth-child(2) h3::before {
+    content: '📧';
+}
+
+.about-card:nth-child(3) h3::before {
+    content: '📱';
+}
+
+.about-card p {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.about-card a {
+    color: var(--accent-primary);
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.about-card a:hover {
+    color: var(--accent-secondary);
+    text-decoration: underline;
+}
+
+/* ===== SKILLS SECTION ===== */
+.skills {
+    text-align: center;
+    animation: fadeInUp 0.6s ease-out 0.3s both;
+}
+
+.skills h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 2rem;
+    position: relative;
+    display: inline-block;
+}
+
+.skills h3::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: var(--accent-gradient);
+    border-radius: 2px;
+}
+
+/* ===== SKILL LIST ===== */
+.skill-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.skill-list li {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    transition: var(--transition);
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.skill-list li::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: var(--accent-gradient);
+    transition: left 0.5s ease;
+    z-index: -1;
+}
+
+.skill-list li:hover::before {
+    left: 0;
+}
+
+.skill-list li:hover {
+    color: white;
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: var(--shadow-md);
+    border-color: transparent;
+}
+
+/* ===== ABOUT STATS ===== */
+.about-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin: 4rem 0;
+    padding: 3rem 0;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.stat-item {
+    text-align: center;
+    padding: 1.5rem;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.stat-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--accent-primary);
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--accent-primary);
+    display: block;
+    margin-bottom: 0.5rem;
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.stat-label {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* ===== JOURNEY SECTION ===== */
+.about-journey {
+    margin-top: 4rem;
+    text-align: center;
+}
+
+.about-journey h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 2rem;
+}
+
+.journey-text {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* ===== INTERESTS SECTION ===== */
+.interests {
+    margin-top: 4rem;
+    text-align: center;
+}
+
+.interests h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 2rem;
+    position: relative;
+    display: inline-block;
+}
+
+.interests h3::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: var(--accent-gradient);
+    border-radius: 2px;
+}
+
+.interest-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.interest-item {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 25px;
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    transition: var(--transition);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.interest-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: var(--accent-gradient);
+    transition: left 0.3s ease;
+    z-index: -1;
+}
+
+.interest-item:hover::before {
+    left: 0;
+}
+
+.interest-item:hover {
+    color: white;
+    border-color: transparent;
+    transform: scale(1.05);
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+    .about {
+        padding: 4rem 0;
+    }
+
+    .about .container {
+        padding: 0 1rem;
+    }
+
+    .about-header {
+        margin-bottom: 3rem;
+    }
+
+    .about h2 {
+        font-size: 2.5rem;
+    }
+
+    .about-intro {
+        font-size: 1.1rem;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        margin: 2rem 0 3rem;
+    }
+
+    .about-card {
+        padding: 1.5rem;
+    }
+
+    .skills h3 {
+        font-size: 1.8rem;
+    }
+
+    .skill-list {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 0.8rem;
+    }
+
+    .skill-list li {
+        padding: 0.8rem;
+        font-size: 0.9rem;
+    }
+
+    .about-stats {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 1rem;
+        margin: 3rem 0;
+        padding: 2rem 0;
+    }
+
+    .stat-item {
+        padding: 1rem;
+    }
+
+    .stat-number {
+        font-size: 2rem;
+    }
+
+    .stat-label {
+        font-size: 0.9rem;
+    }
+
+    .about-journey h3,
+    .interests h3 {
+        font-size: 1.8rem;
+    }
+
+    .journey-text {
+        font-size: 1rem;
+    }
+
+    .interest-list {
+        gap: 0.8rem;
+    }
+
+    .interest-item {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .about h2 {
+        font-size: 2rem;
+    }
+
+    .about-intro {
+        font-size: 1rem;
+    }
+
+    .about-card {
+        padding: 1.2rem;
+    }
+
+    .about-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .skill-list {
+        grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+    }
+
+    .about-stats {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .stat-number {
+        font-size: 1.8rem;
+    }
+}
+
+/* ===== ANIMATION DELAYS ===== */
+.about-card:nth-child(1) {
+    animation: fadeInUp 0.6s ease-out 0.1s both;
+}
+
+.about-card:nth-child(2) {
+    animation: fadeInUp 0.6s ease-out 0.2s both;
+}
+
+.about-card:nth-child(3) {
+    animation: fadeInUp 0.6s ease-out 0.3s both;
+}
+
+.skill-list li:nth-child(n) {
+    animation: fadeInUp 0.4s ease-out calc(0.1s * var(--i)) both;
+}
+
+/* ===== SKILL HOVER EFFECTS ===== */
+.skill-list li:nth-child(1) {
+    --i: 1;
+}
+
+.skill-list li:nth-child(2) {
+    --i: 2;
+}
+
+.skill-list li:nth-child(3) {
+    --i: 3;
+}
+
+.skill-list li:nth-child(4) {
+    --i: 4;
+}
+
+.skill-list li:nth-child(5) {
+    --i: 5;
+}
+
+.skill-list li:nth-child(6) {
+    --i: 6;
+}
+
+.skill-list li:nth-child(7) {
+    --i: 7;
+}
+
+.skill-list li:nth-child(8) {
+    --i: 8;
+}
+
+.skill-list li:nth-child(9) {
+    --i: 9;
+}
