@@ -13,6 +13,6 @@ export const PROFILE = {
         instagram_personal: "https://www.instagram.com/jebassamgifton/",
         instagram_official: "https://instagram.com/jebas_sam_gifton_",
         netlify: "https://online-bookstore-app.netlify.app",
-        resume: "/resume.pdf",
+        resume: "/Jebas_Sam_Gifton_Resume_Fresher_FullStackDevelopers.pdf",
     },
 }
