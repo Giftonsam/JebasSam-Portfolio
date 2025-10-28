@@ -6,8 +6,11 @@ import './styles/globals.css'
 import './styles/layout.css'
 import './styles/utils.css'
 
+// ✅ Add basename conditionally
+const basename = import.meta.env.MODE === 'production' ? '/JebasSam-Portfolio' : '/'
+
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <BrowserRouter>
+  <BrowserRouter basename={basename}>
     <App />
   </BrowserRouter>
 )
