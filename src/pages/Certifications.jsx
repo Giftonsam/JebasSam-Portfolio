@@ -10,9 +10,9 @@ const CERTIFICATES = [
         title: "Placement Training",
         organization: "TAMILNADU ADVANCED TECHNICAL TRAINING INSTITUTE",
         date: "2022",
-        image: "/certificates/1.jpg",
+        image: `${import.meta.env.BASE_URL}certificates/1.jpg`,
         description: "Certificate Cource on Placement Training",
-        skills: ["English Grammer","Aptitude","Communication"]
+        skills: ["English Grammer", "Aptitude", "Communication"]
         // credentialId: "UC-12345678"
         // verifyUrl: "https://example.com/verify/12345678"
     },
@@ -21,9 +21,9 @@ const CERTIFICATES = [
         title: "Zero Shadow Day",
         organization: "TAMILNADU SCIENCE AND TECHNOLOGY CENTRE, CHENNAI",
         date: "2022",
-        image: "/certificates/2.jpg",
+        image: `${import.meta.env.BASE_URL}certificates/2.jpg`,
         description: "Regional Level Science Exhibition on Zero Shadow Day",
-        skills: ["Get Knowledge about Shadow","Science Exhibition","Innovative Ideas"]
+        skills: ["Get Knowledge about Shadow", "Science Exhibition", "Innovative Ideas"]
         // credentialId: "NT-87654321"
         // verifyUrl: "https://example.com/verify/87654321"
     },
@@ -32,7 +32,7 @@ const CERTIFICATES = [
         title: "SMART INDIA HACKATHON",
         organization: "Innovation Cell",
         date: "2022",
-        image: "/certificates/3.jpg",
+        image: `${import.meta.env.BASE_URL}certificates/3.jpg`,
         description: "articipation in National Level Hackathon organized by Govt of India",
         skills: ["Hackathon", "Problem Solving", "Team Collaboration", "Innovation"]
         // credentialId: "IBM-11223344",
@@ -43,7 +43,7 @@ const CERTIFICATES = [
         title: "IDEATHON 2022",
         organization: "Kangeyam groups of Institutions",
         date: "2022",
-        image: "/certificates/4.jpg",
+        image: `${import.meta.env.BASE_URL}certificates/4.jpg`,
         description: "Participation in National Level Ideathon on AI based Security System",
         skills: ["AI", "Security", "Innovation", "Problem Solving"]
         // credentialId: "IBM-44332211",
@@ -54,7 +54,7 @@ const CERTIFICATES = [
         title: "SJC's National level Innovation Feast",
         organization: "St.Joseph's College (Autonomous), Tiruchirappalli",
         date: "2023",
-        image: "/certificates/5.jpg",
+        image: `${import.meta.env.BASE_URL}certificates/5.jpg`,
         description: "Participation in National Level Innovation Feast on multilingual Tamil poetry translation website with text-to-speech functionality",
         skills: ["Web Development", "NLP", "Text-to-Speech", "Innovation"]
         // credentialId: "WF-55667788",
@@ -65,7 +65,7 @@ const CERTIFICATES = [
     //     title: "Java Full Stack Development",
     //     organization: "QSpiders",
     //     date: "2024",
-    //     image: "/certificates/6.jpg",
+    //     image: `${import.meta.env.BASE_URL}certificates/6.jpg`,
     //     description: "Complete Java Full Stack Development certification",
     //     skills: ["Java", "Spring Boot", "React", "MySQL", "REST APIs"],
     //     credentialId: "QS-99887766",
@@ -76,7 +76,7 @@ const CERTIFICATES = [
         title: "Attendance Certificate",
         organization: "Patrician College of Arts and Science",
         date: "2023",
-        image: "/certificates/6.jpg",
+        image: `${import.meta.env.BASE_URL}certificates/6.jpg`,
         description: "Attendance Certificate for the Academic Year 2020-2023",
         skills: ["Attendance"]
         // credentialId: "QS-99887766",
@@ -87,7 +87,7 @@ const CERTIFICATES = [
         title: "International Conference on Embrasing Excellence in Computer Research And Innovations (EECRI-2024)",
         organization: "Patrician College of Arts and Science",
         date: "2024",
-        image: "/certificates/7.jpg",
+        image: `${import.meta.env.BASE_URL}certificates/7.jpg`,
         description: "SMART CITY IN IOT Paper Presentation",
         skills: ["IoT", "Smart City", "Research", "Innovation"]
         // credentialId: "WF-55667788",
@@ -98,7 +98,7 @@ const CERTIFICATES = [
         title: "CERTIFICATE OF APPRECIATION",
         organization: "Thiruthangal Nadar College",
         date: "2024",
-        image: "/certificates/8.jpg",
+        image: `${import.meta.env.BASE_URL}certificates/8.jpg`,
         description: "For Creating an Innovation Cell Logo for Thiruthangal Nadar College",
         skills: ["Graphic Design", "Creativity", "Innovation"]
         // credentialId: "WF-55667788",
@@ -109,7 +109,7 @@ const CERTIFICATES = [
         title: "2nd NATIONAL CONFERENCE",
         organization: "Thiruthangal Nadar College",
         date: "2024",
-        image: "/certificates/9.jpg",
+        image: `${import.meta.env.BASE_URL}certificates/9.jpg`,
         description: "SMART HOME IN IoT Paper Presentation",
         skills: ["IoT", "Smart Home", "Research", "Innovation"]
         // credentialId: "WF-55667788",
@@ -120,7 +120,7 @@ const CERTIFICATES = [
     //     title: "Employability Skills Foundation",
     //     organization: "Wadhwani",
     //     date: "2024",
-    //     image: "/certificates/10.jpg",
+    //     image: `${import.meta.env.BASE_URL}certificates/10.jpg`,
     //     description: "Essential skills for professional development and career growth",
     //     skills: ["Communication", "Leadership", "Problem Solving", "Team Work"],
     //     credentialId: "WF-55667788",
@@ -132,7 +132,7 @@ const CERTIFICATES = [
     //     title: "Employability Skills Foundation",
     //     organization: "Wadhwani",
     //     date: "2024",
-    //     image: "/certificates/11.jpg",
+    //     image: `${import.meta.env.BASE_URL}certificates/11.jpg`,
     //     description: "Essential skills for professional development and career growth",
     //     skills: ["Communication", "Leadership", "Problem Solving", "Team Work"],
     //     credentialId: "WF-55667788",
@@ -143,7 +143,7 @@ const CERTIFICATES = [
     //     title: "Employability Skills Foundation",
     //     organization: "Wadhwani",
     //     date: "2024",
-    //     image: "/certificates/12.jpg",
+    //     image: `${import.meta.env.BASE_URL}certificates/12.jpg`,
     //     description: "Essential skills for professional development and career growth",
     //     skills: ["Communication", "Leadership", "Problem Solving", "Team Work"],
     //     credentialId: "WF-55667788",
@@ -154,7 +154,7 @@ const CERTIFICATES = [
     //     title: "Employability Skills Foundation",
     //     organization: "Wadhwani",
     //     date: "2024",
-    //     image: "/certificates/13.jpg",
+    //     image: `${import.meta.env.BASE_URL}certificates/13.jpg`,
     //     description: "Essential skills for professional development and career growth",
     //     skills: ["Communication", "Leadership", "Problem Solving", "Team Work"],
     //     credentialId: "WF-55667788",
@@ -165,7 +165,7 @@ const CERTIFICATES = [
     //     title: "Employability Skills Foundation",
     //     organization: "Wadhwani",
     //     date: "2024",
-    //     image: "/certificates/14.jpg",
+    //     image: `${import.meta.env.BASE_URL}certificates/14.jpg`,
     //     description: "Essential skills for professional development and career growth",
     //     skills: ["Communication", "Leadership", "Problem Solving", "Team Work"],
     //     credentialId: "WF-55667788",
@@ -176,7 +176,7 @@ const CERTIFICATES = [
         title: "ADD ON COURSE ON ARTIFICIAL INTELLIGENCE FOR ECONOMICS",
         organization: "Thiruthangal Nadar College",
         date: "2024- 2025",
-        image: "/certificates/15.jpg",
+        image: `${import.meta.env.BASE_URL}certificates/15.jpg`,
         description: "Essential skills for professional development and career growth",
         skills: ["Communication", "Problem Solving"]
         // credentialId: "WF-55667788",
@@ -187,18 +187,18 @@ const CERTIFICATES = [
         title: "COURSE COMPLETION CERTIFICATE ON CORE AND ADVANCED PYTHON PROGRAMMING",
         organization: "Elysium Academy",
         date: "2021",
-        image: "/certificates/16.jpg",
+        image: `${import.meta.env.BASE_URL}certificates/16.jpg`,
         description: "Completed Core and Advanced Python Programming Course",
         skills: ["Python", "Programming", "Problem Solving"]
         // credentialId: "WF-55667788",
         // verifyUrl: "https://example.com/verify/55667788"
     },
     {
-        id: 18,
+        id: 17,
         title: "COURSE COMPLETION CERTIFICATE ON ADVANCED JAVA PROGRAMMING",
         organization: "Greens Technology",
         date: "2023",
-        image: "/certificates/17.jpg",
+        image: `${import.meta.env.BASE_URL}certificates/17.jpg`,
         description: "Completed Advanced Java Programming Course",
         skills: ["Java", "Programming", "Problem Solving"]
         // credentialId: "WF-55667788",
